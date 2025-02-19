@@ -1,3 +1,6 @@
+const HtmlPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+
 module.exports = {
     entry: {
         main: './src/main.js',
@@ -30,6 +33,12 @@ module.exports = {
           }
         ]
       },
-    plugins: [], // 플러그인
-    // 기타 옵션...
+      plugins: [
+        new HtmlWebpackPlugin({
+          template: './src/index.html'
+        }),
+        new CopyPlugin({
+          patterns: [{ from: 'static' }]
+        })
+      ]
   }
