@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["main.scss"],"sourcesContent":["$color: red;\r\nh1 {\r\n  color: $color;\r\n}"],"file":"main.css"}

@@ -10,7 +10,8 @@ module.exports = {
     output: {
         //기본값으로 설정되는 옵션이 있긴함
         //dist : distribution의 약자
-        path: path.resolve(__dirname, 'dist'),
+        //path: path.resolve(__dirname, 'dist'),
+        clean:true
     }, // 출력
     module: {
         rules: [
@@ -34,7 +35,7 @@ module.exports = {
         ]
       },
       plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
           template: './src/index.html'
         }),
         new CopyPlugin({
